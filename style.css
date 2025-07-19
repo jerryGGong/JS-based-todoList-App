@@ -1,0 +1,184 @@
+/* style.css */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #f3f3f3;
+    border-radius: 8px;
+    font-size: 16px;
+    padding:20px;
+
+}
+
+#todo-input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#todo-input input:focus {
+    border-color: #2f80ed;
+    /*box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.2);*/
+}
+
+#todo-input button {
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#todo-input button:hover {
+    background-color: #1366d6;
+}
+
+#todo-input button:active {
+    transform: scale(0.98);
+}
+
+#todo-input button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#todo-list p {
+    font-size: 15px;
+    color: #888;
+    text-align: center;
+    margin: 20px 0;
+    padding: 40px;
+    background: #f3f0ff;
+}
+
+#todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#todo-list input[type=\"text\"] {
+    flex: 1;
+    padding: 6px 12px;
+    font-size: 15px;
+}
+
+#todo-list input:focus {
+    border-color: #2f80ed;
+}
+
+/* TodoItem 내부 input 전용 클래스 */
+.todo-input-edit {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    display: none; /* 기본은 숨김 상태로 처리할 경우 */
+}
+
+/* 선택 상태일 때만 나타나는 경우에는 display 처리  */
+.todo-input-edit:focus {
+    border-color: #2f80ed;
+}
+
+.todo-item-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#todo-list span {
+    flex: 1;
+}
+
+#todo-list button {
+    background: #ed5565;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#todo-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+#todo-controls button {
+    padding: 15px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+}
+
+#todo-controls button.complete {
+    background-color: #2f80ed;
+    color: white;
+}
+#todo-controls button.complete:hover {
+    background-color: #1366d6;
+}
+
+#todo-controls button.clear {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#todo-controls button.clear:hover {
+    background-color: #c0392b;
+}
+
+#todo-controls button:active {
+    transform: scale(0.98);
+}
+
+
+
+#todo-stats {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
